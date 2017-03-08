@@ -10,6 +10,7 @@ RUN echo "deb http://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/s
 
 RUN apt-get update && apt-get install -y \
     openjdk-7-jdk \
+    openjdk-8-jdk \
     bzip2 \
     docker-engine
 
@@ -75,7 +76,7 @@ RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
     B6470EDC6EA51DA6B59B4A3DEE2EBD8956CACE56
 
 WORKDIR /opt
-RUN for MVN_VERSION in "3.3.3" "3.2.5" "3.1.1" ; do \
+RUN for MVN_VERSION in "3.3.9" "3.2.5" "3.1.1" "3.0.5" ; do \
         MVN_TGZ=apache-maven-${MVN_VERSION}.tar.gz ; \
         MVN_TGZ_URL=http://www.apache.org/dist/maven/maven-3/${MVN_VERSION}/binaries/apache-maven-${MVN_VERSION}-bin.tar.gz ; \
         set -x \
