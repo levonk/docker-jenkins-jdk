@@ -24,3 +24,9 @@ TODO
 ----
 
 * Configure the list of maven and JVM versions and paramerize the groovy scripts
+* Europa Container registry
+* Maven artificat registry
+* Sonarqube
+* Postgres (for Sonarqube, and owasp)
+* 
+
